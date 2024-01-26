@@ -58,3 +58,70 @@
 .container__botao{
     display: none;
 }
+
+.container__titulo{
+    display: none;
+}
+
+.opcoes{
+    display: none;
+}
+/* 
+media query: 
+Técnica utilizada para criar páginas web responsivas. Basicamente, elas permitem que você 
+aplique estilos diferentes a um website dependendo das características do dispositivo do usuário, 
+como o tamanho da tela, resolução, orientação (retrato ou paisagem), e até mesmo tipo de mídia 
+(como tela ou impressora).
+
+A estrutura é a seguinte: usamos @media para indicar que é um media query. 
+O screen é um tipo de mídia, e queremos dizer que é a tela. 
+Em seguida, temos and (min-width: 1024px), o que significa que o mínimo da largura da tela deve 
+ser 1024px, o tamanho que definimos como designer.
+*/
+@media screen and (min-width: 1024px){
+    .container__titulo, 
+    .container__titulo--negrito{
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+    .container__titulo{
+        font-weight: 400;
+        display: block;
+    }
+    .container__titulo--negrito{
+        font-weight: 700;
+    }
+
+    .opcoes{
+        display: flex;
+    }
+
+    .opcoes__item{
+        padding: 1em;
+        text-transform: uppercase;
+    }
+
+    .opcoes__link{
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .container__imagem--transparente{
+        display: none;
+    }
+
+    .cabecalho__menu-hamburguer{
+        display: none;
+    }
+
+
+    .opcoes__botao:checked ~.lista-menu{
+        display: block;
+        width: auto;
+    }
+
+    .opcoes__botao{
+        display: none;
+    }
+
+}
